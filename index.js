@@ -7,6 +7,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
 async function update(idStart,idEnd){
   return await db.query(`
     update 
@@ -55,7 +56,6 @@ async function updateLinks (){
           console.log(error.where);
         }
       }
-
       if ( updatedSuccess ) {
         console.log(`units links updated ${idStart} and ${idEnd}`);
       } else {
